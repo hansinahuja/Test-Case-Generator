@@ -200,7 +200,7 @@ class WeightedGraph extends Component {
           <div className="col">
             <Input
               name="min"
-              label={"Min Value"}
+              label={"Min Weight"}
               value={min}
               onChange={handleChange}
             />
@@ -208,7 +208,7 @@ class WeightedGraph extends Component {
           <div className="col">
             <Input
               name="max"
-              label={"Max Value"}
+              label={"Max Weight"}
               value={max}
               onChange={handleChange}
             />
