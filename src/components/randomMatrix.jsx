@@ -48,16 +48,19 @@ class RandomMatrix extends Component {
       }
       return outp;
     } else {
-      let arr = [];
+      let mainArr = [];
       for (let i = 0; i < n; i++) {
+        let arr = [];
         while (arr.length < m) {
           let num = Math.floor(Math.random() * (max - min + 1)) + min;
-          if (arr.indexOf(num) === -1) arr.push(num);
+          if (mainArr.indexOf(num) === -1){
+            arr.push(num);
+            mainArr.push(num);
+          }
         }
+        // console.log(arr);
         outp += arr.join(" ") + "\n";
-        arr = [];
-      }
-      return outp;
+        return outp;
     }
   };
 
