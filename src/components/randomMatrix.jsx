@@ -53,7 +53,7 @@ class RandomMatrix extends Component {
         let arr = [];
         while (arr.length < m) {
           let num = Math.floor(Math.random() * (max - min + 1)) + min;
-          if (mainArr.indexOf(num) === -1){
+          if (mainArr.indexOf(num) === -1) {
             arr.push(num);
             mainArr.push(num);
           }
@@ -61,6 +61,7 @@ class RandomMatrix extends Component {
         // console.log(arr);
         outp += arr.join(" ") + "\n";
         return outp;
+      }
     }
   };
 
@@ -249,3 +250,4 @@ class RandomMatrix extends Component {
 }
 
 export default RandomMatrix;
+// }

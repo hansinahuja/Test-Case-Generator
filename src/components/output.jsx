@@ -10,6 +10,18 @@ class Output extends Component {
     document.execCommand("copy");
   };
 
+  handleDownload = (e) => {
+    e.preventDefault();
+    const element = document.createElement("a");
+    const file = new Blob([this.props.output], {
+      type: "text/plain",
+    });
+    element.href = URL.createObjectURL(file);
+    element.download = "output.txt";
+    document.body.appendChild(element); // Required for this to work in FireFox
+    element.click();
+  };
+
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
@@ -34,6 +46,14 @@ class Output extends Component {
           // href="#outlined-buttons"
         >
           Copy
+        </Button>
+        &nbsp; &nbsp;
+        <Button
+          onClick={this.handleDownload}
+          variant="contained"
+          color="primary"
+        >
+          Download
         </Button>
       </form>
     );
