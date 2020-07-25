@@ -60,8 +60,8 @@ class RandomMatrix extends Component {
         }
         // console.log(arr);
         outp += arr.join(" ") + "\n";
-        return outp;
       }
+      return outp;
     }
   };
 
