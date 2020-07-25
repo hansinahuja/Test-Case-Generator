@@ -128,7 +128,7 @@ class RandomTree extends Component {
     }
 
     return (
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} autocomplete="off">
         <div className="row">
           <div className="col">
             <Input
